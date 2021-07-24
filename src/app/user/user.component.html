@@ -1,0 +1,68 @@
+<p>user works!</p>
+<form [formGroup]="railway" (ngSubmit)="passengerSubmit()">
+    <h1 style="text-align:center">Railway Registration Form</h1>
+    <div class="container">
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label>Name :</label>
+                <input type="text" formControlName="name" placeholder="Enter your Name." class="form-control">
+            </div>
+            <div class="form-group col-md-6">
+                <label>Email :</label>
+                <input type="email" formControlName="email" placeholder="Enter your email.." class="form-control">
+
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label>Phone :</label>
+                <input type="number" formControlName="phone" placeholder="Enter mobile number." class="form-control">
+
+            </div>
+            <div class="form-group col-md-6">
+                <label>DOB</label>
+                <input type="date" formControlName="dob" class="form-control">
+            </div>
+
+
+
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+
+                <label>Gender : </label>
+                <input type="radio" formControlName="gender" value="Male"> Male
+                <input type="radio" formControlName="gender" value="Female"> Female
+                <input type="radio" formControlName="gender" value="Others"> Others
+            </div>
+            <div class="form-group col-md-6">
+                <label>Payment :</label>
+                <input type="radio" formControlName="payment" value="Debit card"> Debit card
+                <input type="radio" formControlName="payment" value="Credit card"> Credit card
+                <input type="radio" formControlName="payment" value="Net banking"> Net Banking
+            </div>
+
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label>Payment Amount</label>
+                <input type="text" formControlName="amount" placeholder="Enter your email.." class="form-control">
+            </div>
+            <div class="form-group col-md-6">
+                <label>City</label>
+                <select class="form-control" formControlname='city' (change)="selectCity($event)">
+                  <option value=''>--SELECT CITY--</option>
+                  <option value='Ahmedabad'>Ahmedabad</option>
+                  <option value='Kolkata'>Kolkata</option>
+                  <option value='Mumbai'>Mumbai</option>
+                  <option value='Bhubaneswar'>Bhubaneswar</option>
+                  <option value='Pune'>Pune</option>
+              </select>
+            </div>
+        </div>
+        <div class="text-center">
+            <input type="submit" class="btn btn-primary text-center form-control" value="submit">
+        </div>
+    </div>
+</form>

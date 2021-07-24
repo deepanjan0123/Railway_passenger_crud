@@ -1,0 +1,36 @@
+<p>list works!</p>
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">name</th>
+        <th scope="col">email</th>
+        <th scope="col">phone</th>
+        <th scope="col">dob</th>
+        <th scope="col">Gender</th>
+        <th scope="col">payment</th>
+        <th scope="col">amount</th>
+        <th scope="col">city</th>
+        <th>operation</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor = "let item of list;let i = index">
+        <td scope="row">{{i+1}}</td>
+        <td>{{item.name}}</td>
+        <td>{{item.email}}</td>
+        <td>{{item.phone}}</td>
+        <td>{{item.dob}}</td>
+        <td>{{item.gender}}</td>
+        <td>{{item.payment}}</td>
+        <td>{{item.amount}}</td>
+        <td>{{item.city}}</td>
+        <td>
+          <button class="btn btn-primary" (click)="updateRow(i)">Update</button>
+          <button class="btn btn-danger" (click)="deleteRow(i)">Delete</button>
+        </td>
+        
+      </tr>
+    </tbody>
+  </table>
+  <button routerLink="/user" class="btn btn-primary">Add Passenger</button>

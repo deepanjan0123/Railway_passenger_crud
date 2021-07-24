@@ -1,0 +1,41 @@
+/* form{
+    background-color: rgba(240, 232, 232, 0.932);
+    padding: 20px;
+    margin: 10px;
+    margin-bottom: 5px;
+    transition: 0.3s;
+    border-radius: 0.5rem;
+}
+h1{
+    margin-top:10px;
+    margin-bottom: 30px;
+}
+
+.label{
+    font-size: 18px;
+    font-family: Times New Roman Georgia;
+}
+input{
+    
+  padding: 0.5rem 2rem;
+  margin: 4px;
+  border:none;
+  outline: none;
+  font-weight: bold;
+  border-radius: 1rem;
+  background-color: white;
+}
+input:hover{
+    box-shadow: 0px 0px 10px black;
+}
+select{
+    background-color:white;
+    padding: 0.5rem 2rem;
+    margin: 4px;
+    outline: none;
+    font-weight: bold;
+    border-radius: 1rem;
+}
+select:hover{
+    box-shadow: 0px 0px 10px black;
+} */

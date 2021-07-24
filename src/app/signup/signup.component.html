@@ -1,0 +1,55 @@
+
+<form [formGroup]="signup" (ngSubmit)="Submit()">
+    <div class="container-fluid d-flex justify-content-center">
+        <div class="col-sm-6 ">
+            <h2 class="text-center">Sign Up</h2>
+            <div class="form-group">
+                <label for="text"><b>Name</b></label>
+                <input type="text" placeholder="Enter Name" formControlName="name" class="form-control" >  
+                <div *ngIf="signup.controls?.name?.invalid">
+                    <span class="hass-error-message" *ngIf="signup.controls?.name?.errors?.minlength">
+                        <p class="validation text-danger">*please enter valid name</p>
+                    </span>
+    
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="email"><b>Email</b></label>
+                <input type="email" placeholder="Enter Email" formControlName="email" class="form-control">
+                <div *ngIf="signup.controls?.email?.invalid">
+                    <span class="hass-error-message" *ngIf="signup.controls?.email?.errors?.pattern">
+                        <p class="validation text-danger">*please enter valid email id</p>
+                    </span>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="password"><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" formControlName="pswd" class="form-control">
+                <div *ngIf="signup.controls?.pswd?.invalid">          
+                  <span class="hass-error-message" *ngIf="signup.controls?.pswd?.errors?.minlength">
+                    <p class="validation text-danger">*Minimum 5 character.</p>
+                  </span>
+                  <span class="hass-error-message" *ngIf="signup.controls?.pswd?.errors?.maxlength">
+                    <p class="validation text-danger">*Maximum 10 character.</p>
+                  </span>
+                </div>
+            </div>
+        
+            <!-- <label for="psw-repeat"><b>Repeat Password</b></label>
+            <input type="password" placeholder="Repeat Password" formControlName="psw_repeat" required>-->
+             
+            <!-- <label>
+              <input type="checkbox" checked="checked" formControlName="remember" style="margin-bottom:15px"> Remember me
+            </label> -->
+
+            
+            <div class="clearfix d-flex justify-content-center">
+              <button type="button" class="btn btn-danger text-center cancelbtn">Cancel</button>
+              <button type="submit" class="btn btn-success  signupbtn">Sign Up</button>
+            </div>
+            <!-- <button type="button" (click)="sub()">sub</button> -->
+        </div>
+    </div>
+</form><br>
+<!-- <p>oderstatus{{oderstatus}}</p> -->

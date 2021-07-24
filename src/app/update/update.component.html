@@ -1,0 +1,121 @@
+<p>user works!</p>
+<form [formGroup]="updateForm" (ngSubmit)="updatePassenger()">
+    <!-- <p>{{list.name1}}</p> -->
+    <!-- <h1 style="text-align:center">Railway Registration Form</h1>
+    <div class="detail">
+        <table cellpadding="5" cellspacing="5">
+            <tr>
+                <td class="label">Name :</td>
+                <td><input type="text" formControlName="name" placeholder="Enter your Name." [(ngModel)]="obj.name"></td>
+                <td class="label">Email :</td>
+                <td><input type="email" formControlName="email" placeholder="Enter your email.." [(ngModel)]="obj.email"></td>
+                <td class="label">Ph No :</td>
+                <td><input type="number" formControlName="phone" placeholder="Enter mobile number." [(ngModel)]="obj.phone"></td>
+            </tr>
+
+            <tr>
+                <td class="label">DOB</td>
+                <td><input type="date" formControlName="dob" [(ngModel)]="obj.dob"></td>
+
+                <td class="label">Gender</td>
+                <td><input type="radio" formControlName="gender" value="Male" [(ngModel)]="obj.gender"> Male
+                    <input type="radio" formControlName="gender" value="Female" [(ngModel)]="obj.gender"> Female
+                    <input type="radio" formControlName="gender" value="Others" [(ngModel)]="obj.gender"> Others
+                </td>
+
+            </tr>
+            <tr>
+                <td class="label">Payment Type</td>
+                <td><input type="radio" formControlName="payment" value="Debit card" [(ngModel)]="obj.payment"> Debit card
+                    <input type="radio" formControlName="payment" value="Credit card" [(ngModel)]="obj.payment"> Credit card
+                    <input type="radio" formControlName="payment" value="Net banking" [(ngModel)]="obj.payment"> Net Banking </td>
+            </tr>
+            <tr>
+                <td class="label">Payment Amount</td>
+                <td><input type="text" formControlName="amount" placeholder="Enter your amount.." [(ngModel)]="obj.amount"> -->
+    <!-- <td  class="label">City</td>
+              <td><select name='city'>
+                  <option value=''>--SELECT CITY--</option>
+                  <option>Ahmedabad</option>
+                  <option>Kolkata</option>
+                  <option>Mumbai</option>
+                  <option>Bhubaneswar</option>
+                  <option>Pune</option>
+                  </select>
+              </td> -->
+    <!-- <td class="label">Add your votar</td>
+                    <td><input type='file' name='pic'></td>
+            </tr>
+        </table>
+    </div>
+    <div class="end" style="text-align:center">
+        <input style="background-color:rgb(21, 223, 223);" type="submit" value="Submit">
+
+    </div> -->
+
+
+    <h1 style="text-align:center">Railway Registration Form</h1>
+    <div class="container">
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label>Name :</label>
+                <input type="text" formControlName="name" placeholder="Enter your Name." class="form-control" [(ngModel)]="obj.name">
+            </div>
+            <div class="form-group col-md-6">
+                <label>Email :</label>
+                <input type="email" formControlName="email" placeholder="Enter your email.." class="form-control" [(ngModel)]="obj.email">
+
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label>Phone :</label>
+                <input type="number" formControlName="phone" placeholder="Enter mobile number." class="form-control" [(ngModel)]="obj.phone">
+
+            </div>
+            <div class="form-group col-md-6">
+                <label>DOB</label>
+                <input type="date" formControlName="dob" class="form-control" [(ngModel)]="obj.dob">
+            </div>
+
+
+
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label>Payment :</label>
+                <input type="radio" formControlName="payment" value="Debit card" [(ngModel)]="obj.payment"> Debit card
+                <input type="radio" formControlName="payment" value="Credit card" [(ngModel)]="obj.payment"> Credit card
+                <input type="radio" formControlName="payment" value="Net banking" [(ngModel)]="obj.payment"> Net Banking
+            </div>
+            <div class="form-group col-md-6">
+
+                <label>Gender : </label>
+                <input type="radio" formControlName="gender" value="Male" [(ngModel)]="obj.gender"> Male
+                <input type="radio" formControlName="gender" value="Female" [(ngModel)]="obj.gender"> Female
+                <input type="radio" formControlName="gender" value="Others" [(ngModel)]="obj.gender"> Others
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label>Payment Amount</label>
+                <input type="text" formControlName="amount" placeholder="Enter your amount.." class="form-control" [(ngModel)]="obj.amount">
+            </div>
+            <div class="form-group col-md-6">
+                <label>City</label>
+                <select class="form-control" formControlname='city' (change)="selectCity($event)">
+                  <option >{{obj.city}}</option>
+                  <option value='Ahmedabad'>Ahmedabad</option>
+                  <option value='Kolkata'>Kolkata</option>
+                  <option value='Mumbai'>Mumbai</option>
+                  <option value='Bhubaneswar'>Bhubaneswar</option>
+                  <option value='Pune'>Pune</option>
+              </select>
+            </div>
+        </div>
+        <div class="text-center">
+            <input type="submit" class="btn btn-primary text-center form-control" value="submit">
+        </div>
+    </div>
+</form>
